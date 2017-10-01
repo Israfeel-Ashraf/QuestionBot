@@ -1,0 +1,40 @@
+Overall, my Pub Quiz chatbot processes some questions quite well and some aren’t processed that well. 
+
+Questions that are processed incorrectly:
+
+“How tall is the Burj Khalifa?” —> However, when asking about the Empire State Building, a correct answer is given.
+“How many wonders of the world are there?” —> Random information is printed to the screen.
+“Which continent is Russia in?” - This just prints the word ‘Russia’ to the screen.
+
+Questions answered correctly:
+
+"Which continent is Canada in?"
+"When was the Berlin Wall built?"
+"Who was Winston Churchill"
+
+My bot can answer a variety of questions, but some are related to the question, and other times the bot will not print anything to the screen.
+
+Improvements:
+
+Use SpaCy NLP entities to be able to look up people – this means that if the entity type is ‘PERSON’, then the bot automatically looks up that person on Wikipedia.
+
+Using ‘urlopen’ for urllib3 to be able to open web pages instead of using Wikipedia.content. This would read in the whole web page, instead of just the content, which may be a problem, as just the text is needed.
+
+More advanced filtering for questions and the details of questions. So instead of choosing by word type, it chooses by entity and word type. This would make the bot answer clearer than the previous one.
+
+Allowing the user to open Wikipedia and then search themselves, if there is no answer then the user could be allowed to open up a webpage and then search for the page itself: 
+Import webbrowser
+
+Openwebsite = input(“open a web page to search for your answer? Yes or no?”).lower()
+If answer == ‘yes’:
+    Webbroswer.open(https://en.wikipedia.org)
+
+Elif answer == ‘no’:     
+    AskQuestions()
+
+I think that the hardest bit in this task was getting the program to find the actual answer to print to the user. I had to make a question details list and then append the details of the question to it. I then split the content of the web page into sentences and then checked each sentence for the question details word. If it was in a sentence, it prints the sentence. 
+
+To sum up, I think that this is a good program, but there are some problems which if improved, would make this program better.
+
+
+
